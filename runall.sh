@@ -9,8 +9,10 @@ HOSTNAME=$(hostname) docker stack deploy -c docker-stack.yml prom
 cd /home/admin
 mkdir fromBuildServer
 cd /home/admin/prometheus
+chmod 755 spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
 cp spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar /home/admin/fromBuildServer/.
 
+chmod 755 petclinic.service
 sudo cp petclinic.service /etc/systemd/system/petclinic.service
 sudo systemctl enable petclinic
 sudo systemctl start petclinic
