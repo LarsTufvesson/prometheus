@@ -64,3 +64,10 @@ scrape_configs:
     
 #     static_configs:
 #          - targets: ['node-exporter:9100']
+
+  - job_name: 'spring-boot'
+
+    scrape_interval: 5s
+    metrics_path: '/manage/prometheus'
+    static_configs:
+      - targets: ['63.32.55.90:8090']
