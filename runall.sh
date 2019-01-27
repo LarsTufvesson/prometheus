@@ -6,7 +6,7 @@ docker swarm init
 
 HOSTNAME=$(hostname) docker stack deploy -c docker-stack.yml prom
 
-sudo apt-get install default-jre
+sudo apt-get install -y default-jre
 
 cd /home/admin
 mkdir fromBuildServer
