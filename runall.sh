@@ -6,6 +6,8 @@ docker swarm init
 
 HOSTNAME=$(hostname) docker stack deploy -c docker-stack.yml prom
 
+sudo apt-get install default-jre
+
 cd /home/admin
 mkdir fromBuildServer
 cd /home/admin/prometheus
