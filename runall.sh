@@ -5,3 +5,13 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker swarm init
 
 HOSTNAME=$(hostname) docker stack deploy -c docker-stack.yml prom
+
+cd /home/admin
+mkdir fromBuildServer
+cd /home/admin/prometheus
+cp spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar /home/admin/fromBuildServer/.
+
+sudo cp petclinic.service /etc/systemd/system/petclinic.service
+sudo systemctl enable petclinic
+sudo systemctl start petclinic
+
