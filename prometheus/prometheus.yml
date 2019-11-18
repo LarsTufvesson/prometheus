@@ -70,4 +70,4 @@ scrape_configs:
     scrape_interval: 5s
     metrics_path: '/manage/prometheus'
     static_configs:
-      - targets: ['63.32.55.90:8090']
+      - targets: ['52.214.50.69:8090']
