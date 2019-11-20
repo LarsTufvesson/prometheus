@@ -7,4 +7,4 @@ receivers:
           - send_resolved: true
             username: 'Lars Tufvesson'
             channel: '#devops'
-            api_url: 'https://hooks.slack.com/services/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'
+            api_url: 'https://hooks.slack.com/services/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'
